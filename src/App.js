@@ -6,7 +6,7 @@ import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import NotFound from "./components/NotFound/NotFound";
 import Profile from "./components/Profile/Profile";
-import UserDetails from "./components/Users/UserDetails/UserDetails";
+import UserDetails from "./components/UserDetails/UserDetails";
 import Users from "./components/Users/Users";
 
 function App() {
