@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import NotFound from "./components/NotFound/NotFound";
 import Profile from "./components/Profile/Profile";
+import UserDetails from "./components/Users/UserDetails/UserDetails";
 import Users from "./components/Users/Users";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/profile" element={<Profile></Profile>}></Route>
         <Route path="/contact" element={<Contact></Contact>}></Route>
         <Route path="/users" element={<Users></Users>}></Route>
+        <Route path="/user/:userId" element={<UserDetails></UserDetails>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>

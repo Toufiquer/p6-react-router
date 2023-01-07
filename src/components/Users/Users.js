@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Outlet } from "react-router-dom";
 import User from "../User/User";
 
 const Users = () => {
@@ -15,7 +16,9 @@ const Users = () => {
           <User user={user} key={user.id}></User>
         ))}
       </div>
-      <div className="bg-blue-400 w-full min-h-screen"></div>
+      <div className="bg-blue-400 w-full min-h-screen">
+        <Outlet></Outlet>
+      </div>
     </div>
   );
 };
