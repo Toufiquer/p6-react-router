@@ -7,6 +7,9 @@ const Navbar = () => {
       <Link className="p-2 border-2 border-solid mx-6 my-2" to="/home">
         Home
       </Link>
+      <Link className="p-2 border-2 border-solid mx-6 my-2" to="/users">
+        Users
+      </Link>
       <Link className="p-2 border-2 border-solid mx-6 my-2" to="/about">
         About
       </Link>
