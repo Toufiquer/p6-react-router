@@ -12,7 +12,7 @@ const Cart = ({ cart: { name, price, quantity, id } }) => {
         </div>
         <div className="flex">
           <button onClick={() => handleIncreaseQuantity(id)}>{plusIcon("22px", "22px")}</button>
-          <h2 className="mx-2 text-xl">{quantity}</h2>
+          <h2 className="mx-2 text-xl text-black ">{quantity}</h2>
           <button onClick={() => handleDecreaseQuantity(id)}>{minusIcon("22px", "22px")}</button>
         </div>
       </div>

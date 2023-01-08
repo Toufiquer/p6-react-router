@@ -11,7 +11,6 @@ const Carts = ({ cartProducts }) => {
   return (
     <div className="relative h-full">
       <div className="sticky top-0 min-h-[600px]">
-        {" "}
         <h2 className="text-xl font-semibold m-4">Total Cart: {cartProducts.length}</h2>
         {cartProducts.map((curr) => (
           <Cart cart={curr} key={curr?.id}></Cart>

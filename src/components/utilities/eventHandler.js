@@ -1,4 +1,4 @@
-import { decreaseItem, increaseItem } from "./manageDB";
+import { decreaseItem, deleteItem, increaseItem } from "./manageDB";
 
 const handleAddToCart = (id) => {
   increaseItem(id);
@@ -13,6 +13,6 @@ const handleDecreaseQuantity = (id) => {
   decreaseItem(id);
 };
 const handleDeleteItem = (id) => {
-  console.log(id, " => Line No: 14");
+  deleteItem(id);
 };
 export { handleAddToCart, handleDecreaseQuantity, handleIncreaseQuantity, handleRemoveFromCart, handleDeleteItem };

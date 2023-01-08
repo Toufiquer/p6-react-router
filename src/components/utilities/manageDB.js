@@ -35,5 +35,14 @@ const decreaseItem = (id) => {
   saveToDB(cartItem);
   fnUpdateCarts();
 };
+const deleteItem = (id) => {
+  const cartItem = getItem();
+  let quantity = cartItem[id];
+  if (quantity >= 1) {
+    delete cartItem[id];
+  }
+  saveToDB(cartItem);
+  fnUpdateCarts();
+};
 
-export { getItem, increaseItem, decreaseItem };
+export { getItem, increaseItem, decreaseItem, deleteItem };

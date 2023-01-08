@@ -37,7 +37,16 @@ const Products = () => {
             <Product key={curr.id} product={curr}></Product>
           ))}
         </div>
-        <div className="container bg-blue-400">{cartProducts.length >= 1 && <Carts cartProducts={cartProducts}></Carts>}</div>
+        <div className="container bg-blue-400">
+          {cartProducts.length >= 1 && <Carts cartProducts={cartProducts}></Carts>}
+
+          {cartProducts.length === 0 && (
+            <>
+              <h2 className="text-xl font-semibold m-4">Total Cart: {cartProducts.length}</h2>
+              <p>Please Add some Item</p>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );
