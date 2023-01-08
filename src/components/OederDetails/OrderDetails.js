@@ -30,7 +30,7 @@ const OrderDetails = () => {
         </div>
         <div className="bg-blue-400 relative  m-2">
           <div
-            className="sticky top-0 text-2xl font-semibold border-2 border-blue-800 border-solid 
+            className="sticky top-4  text-2xl font-semibold border-2 border-blue-800 border-solid 
            m-4 min-h-[600px]"
           >
             Summary

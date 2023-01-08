@@ -44,5 +44,6 @@ const deleteItem = (id) => {
   saveToDB(cartItem);
   fnUpdateCarts();
 };
+const clearAllDB = () => localStorage.removeItem("p6-cart");
 
-export { getItem, increaseItem, decreaseItem, deleteItem };
+export { getItem, clearAllDB, increaseItem, decreaseItem, deleteItem };
