@@ -1,5 +1,3 @@
-import { fnUpdateCarts } from "../Products/Products";
-
 const getItem = () => {
   let cart = {};
   let newCart = localStorage.getItem("p6-cart");
@@ -22,7 +20,7 @@ const increaseItem = (id) => {
     cartItem[id] = 1;
   }
   saveToDB(cartItem);
-  fnUpdateCarts();
+  // fnUpdateCarts();
 };
 const decreaseItem = (id) => {
   const cartItem = getItem();
@@ -33,7 +31,7 @@ const decreaseItem = (id) => {
     cartItem[id] -= 1;
   }
   saveToDB(cartItem);
-  fnUpdateCarts();
+  // fnUpdateCarts();
 };
 const deleteItem = (id) => {
   const cartItem = getItem();
@@ -42,11 +40,11 @@ const deleteItem = (id) => {
     delete cartItem[id];
   }
   saveToDB(cartItem);
-  fnUpdateCarts();
+  // fnUpdateCarts();
 };
 const clearAllDB = () => {
   localStorage.removeItem("p6-cart");
-  fnUpdateCarts();
+  // fnUpdateCarts();
 };
 
 export { getItem, clearAllDB, increaseItem, decreaseItem, deleteItem };

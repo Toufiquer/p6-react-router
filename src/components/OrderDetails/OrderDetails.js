@@ -31,7 +31,7 @@ const OrderDetails = () => {
     <div className="bg-blue-200 ">
       <div className="text-2xl p-4 font-semibold ">Order Details</div>
       <div className="grid grid-cols-1 md:grid-cols-[1fr_400px]">
-        <div className="grid grid-cols-1 md:grid-cols-3">
+        <div className="flex  flex-col">
           {cartDetailsProducts.map((curr) => (
             <CartDetails product={curr} key={curr.id}></CartDetails>
           ))}

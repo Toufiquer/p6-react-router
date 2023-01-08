@@ -1,4 +1,5 @@
 import React from "react";
+import { fnUpdateCartView } from "../OrderDetails/OrderDetails";
 import { clearAllDB } from "../utilities/manageDB";
 import { calculateGrandTotal, calculateTax, calculateTotalAmount, calculateTotalProduct } from "../utilities/productManage";
 
@@ -14,7 +15,13 @@ const Summary = ({ cartDetailsProducts }) => {
       <h2>Tax: ${tax}</h2>
       <h2>Grand Total: ${grandTotal}</h2>
       <div className="flex">
-        <button onClick={clearAllDB} className="text-sm text-white w-1/2 bg-red-500 py-2 px-6 hover:bg-red-600 rounded cursor-pointer my-2 mx-auto">
+        <button
+          onClick={() => {
+            clearAllDB();
+            fnUpdateCartView();
+          }}
+          className="text-sm text-white w-1/2 bg-red-500 py-2 px-6 hover:bg-red-600 rounded cursor-pointer my-2 mx-auto"
+        >
           Clear All
         </button>
       </div>

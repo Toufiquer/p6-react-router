@@ -16,7 +16,7 @@ const calculateTotalProduct = (allProducts) => {
 };
 const calculateTotalAmount = (allProducts) => {
   let data = allProducts.reduce((acc, curr) => {
-    acc += Math.round(curr.quantity) + Math.round(curr.price);
+    acc += Math.round(curr.quantity) * Math.round(curr.price);
     return acc;
   }, 0);
   return data;
