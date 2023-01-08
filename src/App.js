@@ -5,6 +5,7 @@ import Contact from "./components/Contact/Contact";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import NotFound from "./components/NotFound/NotFound";
+import OrderDetails from "./components/OederDetails/OrderDetails";
 import Products from "./components/Products/Products";
 import Profile from "./components/Profile/Profile";
 import UserDetails from "./components/UserDetails/UserDetails";
@@ -19,6 +20,7 @@ function App() {
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/products" element={<Products></Products>}></Route>
+        <Route path="/orderDetails" element={<OrderDetails></OrderDetails>}></Route>
         <Route path="/profile" element={<Profile></Profile>}></Route>
         <Route path="/contact" element={<Contact></Contact>}></Route>
         <Route path="/users" element={<Users></Users>}></Route>

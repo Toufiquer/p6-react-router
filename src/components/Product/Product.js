@@ -1,7 +1,6 @@
 import React from "react";
 
-const Product = ({ product, product: { name, picture, price } }) => {
-  console.log(product, " => Line No: 4");
+const Product = ({ product: { name, picture, price } }) => {
   return (
     <div className="border-2 border-b-gray-600 p-4 bg-blue-400">
       <img className="w-full h-[400px] object-cover" src={picture} alt="" />
