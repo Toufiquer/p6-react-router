@@ -10,9 +10,11 @@ const Summary = ({ cartDetailsProducts }) => {
   let grandTotal = calculateGrandTotal(cartDetailsProducts);
   return (
     <div className="text-left p-4">
-      <h2>Total Item: ${totalItem}</h2>
+      <h2>Total Item: {totalItem}</h2>
       <h2>Total Amount: ${totalAmount}</h2>
-      <h2>Tax: ${tax}</h2>
+      <h2>
+        Tax: ${tax} {"(10%)"}
+      </h2>
       <h2>Grand Total: ${grandTotal}</h2>
       <div className="flex">
         <button
