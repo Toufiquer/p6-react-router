@@ -3,7 +3,7 @@ import CartDetails from "../CartDetails/CartDetails";
 import Summary from "../Summary/Summary";
 import { getItem } from "../utilities/manageDB";
 import { getProductsByIds } from "../utilities/productManage";
-
+let fnUpdateCartView;
 const OrderDetails = () => {
   const [products, setProducts] = useState([]);
   const [cartDetailsProducts, setCartDetailsProducts] = useState([]);
@@ -19,6 +19,14 @@ const OrderDetails = () => {
       setCartDetailsProducts(cartProducts);
     }
   }, [products]);
+  const updateCartView = () => {
+    const cartItem = getItem();
+    if (products.length >= 1) {
+      const cartProducts = getProductsByIds(cartItem, products);
+      setCartDetailsProducts(cartProducts);
+    }
+  };
+  fnUpdateCartView = updateCartView;
   return (
     <div className="bg-blue-200 ">
       <div className="text-2xl p-4 font-semibold ">Order Details</div>
@@ -44,3 +52,4 @@ const OrderDetails = () => {
 };
 
 export default OrderDetails;
+export { fnUpdateCartView };
