@@ -13,7 +13,6 @@ const Products = () => {
       .then((data) => setProducts(data));
   }, []);
   const updateCarts = () => {
-    console.log("cart update", " => Line No: 16");
     const cartItem = getItem();
     if (products.length >= 1) {
       const cartProducts = getProductsByIds(cartItem, products);

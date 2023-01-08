@@ -7,5 +7,25 @@ const getProductsByIds = (ids, products) => {
   }
   return newProducts;
 };
-
-export { getProductsByIds };
+const calculateTotalProduct = (allProducts) => {
+  let data = allProducts.reduce((acc, curr) => {
+    acc += Math.round(curr.quantity);
+    return acc;
+  }, 0);
+  return data;
+};
+const calculateTotalAmount = (allProducts) => {
+  let data = allProducts.reduce((acc, curr) => {
+    acc += Math.round(curr.quantity) + Math.round(curr.price);
+    return acc;
+  }, 0);
+  return data;
+};
+const calculateTax = (allProducts) => {
+  return (calculateTotalAmount(allProducts) * 0.1).toFixed(2);
+};
+const calculateGrandTotal = (allProducts) => {
+  let calculateTotal = calculateTotalAmount(allProducts);
+  return (calculateTotal * 0.1 + calculateTotal).toFixed(2);
+};
+export { getProductsByIds, calculateTotalProduct, calculateTotalAmount, calculateTax, calculateGrandTotal };
