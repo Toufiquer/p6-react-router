@@ -4,6 +4,7 @@ import AreaChartItem from "../ChartItem/AreaChartItem";
 import BarChartItem from "../ChartItem/BarChartItem";
 import ComposedChartItem from "../ChartItem/ComposedChartItem";
 import LineChartItem from "../ChartItem/LineChartItem";
+import PieChartItem from "../ChartItem/PieChartItem";
 import RadarChartItem from "../ChartItem/RadarChartItem";
 import RadialBarChartItem from "../ChartItem/RadialBarChartItem";
 import { getChartsData } from "../utilities/getChartsData";
@@ -26,6 +27,7 @@ const ChartDetails = () => {
       {+id === 4 && <ComposedChartItem chart={chart}></ComposedChartItem>}
       {+id === 5 && <RadarChartItem chart={chart}></RadarChartItem>}
       {+id === 6 && <RadialBarChartItem chart={chart}></RadialBarChartItem>}
+      {+id === 7 && <PieChartItem chart={chart}></PieChartItem>}
     </div>
   );
 };

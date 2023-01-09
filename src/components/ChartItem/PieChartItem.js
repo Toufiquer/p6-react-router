@@ -1,6 +1,7 @@
 import React from "react";
 import { Pie, PieChart } from "recharts";
-const PieChartItem = ({ chartPie0, chartPie1 }) => {
+const PieChartItem = ({ chart }) => {
+  let [chartPie0, chartPie1] = chart;
   return (
     <PieChart width={730} height={250}>
       <Pie data={chartPie0} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" />
