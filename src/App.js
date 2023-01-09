@@ -23,8 +23,10 @@ function App() {
         <Route path="/orderDetails" element={<OrderDetails></OrderDetails>}></Route>
         <Route path="/profile" element={<Profile></Profile>}></Route>
         <Route path="/contact" element={<Contact></Contact>}></Route>
-        <Route path="/users" element={<Users></Users>}></Route>
-        <Route path="/user/:userId" element={<UserDetails></UserDetails>}></Route>
+        <Route path="/users" element={<Users></Users>}>
+          <Route path=":userID" element={<UserDetails></UserDetails>}></Route>
+        </Route>
+        {/* <Route path="/user/:userId" element={<UserDetails></UserDetails>}></Route> */}
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
