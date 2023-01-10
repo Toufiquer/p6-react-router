@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { DataContextAPI } from "../../App";
 import { fnUpdateCartView } from "../OrderDetails/OrderDetails";
 import { clearAllDB } from "../utilities/manageDB";
 import { calculateGrandTotal, calculateTax, calculateTotalAmount, calculateTotalProduct } from "../utilities/productManage";
@@ -8,6 +9,8 @@ const Summary = ({ cartDetailsProducts }) => {
   let totalAmount = calculateTotalAmount(cartDetailsProducts);
   let tax = calculateTax(cartDetailsProducts);
   let grandTotal = calculateGrandTotal(cartDetailsProducts);
+  let valueFormContext = useContext(DataContextAPI);
+  console.log(valueFormContext, " => Line No: 13");
   return (
     <div className="text-left p-4">
       <h2>Total Item: {totalItem}</h2>
@@ -27,6 +30,7 @@ const Summary = ({ cartDetailsProducts }) => {
           Clear All
         </button>
       </div>
+      {valueFormContext}
     </div>
   );
 };
